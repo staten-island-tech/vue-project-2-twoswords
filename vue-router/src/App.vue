@@ -6,7 +6,16 @@
   <router-view/>
 </template>
 
+<script>
+import Button from '../components/Button.vue'
+import NavBar from '../components/NavBar.vue'
+export default {
+  
+}
+</script>
+
 <style>
+  @import './assets/style.css';
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
