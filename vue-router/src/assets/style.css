@@ -10,7 +10,6 @@ body,
   /* Define Colors as colors */
   --black: #131313;
   --light-black: #232323;
-
   --white: #fff;
   --off-white: #f0f1f6;
   --dark-grey: #1a2f41;
@@ -40,84 +39,80 @@ body,
   --h3: 3.375rem;
   --h4: 2.25rem;
   --h5: 1.5rem;
-  --smallText: 0.8rem;
-
-  /* Elevation */
-  --level-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  --level-1-white: 0 1px 3px 0 rgba(255, 255, 255, 0.1),
-    0 1px 2px 0 rgba(255, 255, 255, 0.06);
-  --level-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --level-2-white: 0 4px 6px -1px rgba(255, 255, 255, 0.06),
-    0 2px 4px -1px rgba(255, 255, 255, 0.1);
-  --level-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --level-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
-
-  /* Positioning */
-  --containerPadding: 2.5%;
-  --headerHeight: 3rem;
-  --borderRadius: 10px;
 }
 h1 {
-  margin-top: 0;
-  font-size: var(--h1);
-}
-
-h2 {
   font-size: var(--h2);
 }
-
-h3 {
+h2{
   font-size: var(--h3);
 }
+h3{
+  font-size:var(--h4)
+}
 
-h4 {
+.link {
   font-size: var(--h4);
 }
 
-h5 {
-  font-size: var(--h5);
+button{
+  font-size: var(--h4);
 }
-h1,
-h2,
-h3,
-h4,
-h5 {
-  text-align: center;
-}
-.linked-route {
-  font-size: 3rem;
-}
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+.container {
+  max-width: 960px;
+  margin: 0 auto;
 }
 
-#nav {
-  padding: 30px;
-  width: 15%;
-  margin: 1rem auto;
+/* navbar */
+nav {
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: space-between;
 }
-
-#nav a {
+nav h1 {
+  margin-right: auto;
+}
+nav a, nav button, nav span {
+  margin-left: 20px;
+}
+nav a {
+  color: #444;
+  text-decoration: none;
   font-weight: bold;
-  color: #2c3e50;
+}
+nav span {
+  color: #777;
+}
+button {
+  background:#00dba4;
+  border: 0;
+  padding: 6px 10px;
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+/* forms */
+label {
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  font-size: var(--h4);
 }
-.home {
+input {
+  width: 20rem;
+  height: 3rem;
+  font-size: var(--h4);
+}
+form button {
+  display: block;
+  margin-top: 20px;
+}
+form {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  width: 90vw;
-  margin: 1rem auto;
+  justify-content: center;
+}
+
+.center{
+  display: flex;
+  flex-direction: column;
 }

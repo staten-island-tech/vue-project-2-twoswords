@@ -1,6 +1,7 @@
 <template>
   <form @submit.prevent="handleSubmit">
-    <h3>Sign up</h3>
+    <div class="center">
+ <h2>Login</h2>
 
     <label for="email">Email:</label>
     <input type="email" name="email" v-model="email" required>
@@ -8,7 +9,10 @@
     <label for="email">Password:</label>
     <input type="password" name="password" v-model="password" required>
 
-    <button>Sign up</button>
+    <button>Login</button>
+
+    </div>
+   
   </form>
 </template>
 
@@ -27,3 +31,7 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+
+</style>
