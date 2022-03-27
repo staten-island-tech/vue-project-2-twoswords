@@ -11,6 +11,7 @@
     <input type="password" name="password" v-model="password" required>
 
     <button>Signup</button>
+    <h3 v-if="error">{{error}}</h3>
     </div>
     
   </form>
@@ -18,16 +19,30 @@
 
 <script>
 import { ref } from 'vue'
+import {useStore} from 'vuex'
+import {useRouter} from 'vue-router'
 export default {
   /* eslint-disable */
   name: 'Signup',
   setup() {
     const email = ref('')
     const password = ref('')
-    const handleSubmit = () => {
-      console.log(email.value, password.value)
+    const error = ref(null)
+    const store = useStore()
+    const router = useRouter()
+
+    const handleSubmit = async () => {
+    try {
+     await store.dispatch('signup', {
+       email: email.value,
+       password: password.value
+     })
+     router.push('/')
+   } catch(err){
+     error.value = err.message
+   }
     }
-    return { handleSubmit, email, password }
-  }
+    return {handleSubmit, email, password, error}
+}
 }
 </script>
