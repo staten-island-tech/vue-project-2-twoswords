@@ -1,4 +1,4 @@
-<template>
+<template>      
   <form @submit.prevent="handleSubmit">
     <div class="center">
  <h2>Login</h2>
@@ -14,11 +14,15 @@
     </div>
    
   </form>
+
 </template>
 
 <script>
 import { ref } from 'vue'
 export default {
+  components: {
+
+  },
   /*eslint-disable*/
   name: "Login",
   setup() {
@@ -27,11 +31,10 @@ export default {
     const handleSubmit = () => {
       console.log(email.value, password.value)
     }
-    return { handleSubmit, email, password }
+    return { handleSubmit, email, password}
   }
 }
 </script>
 
 <style scoped>
-
 </style>
