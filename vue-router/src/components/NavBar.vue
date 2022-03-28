@@ -45,5 +45,31 @@ export default {
 </script>
 
 <style scoped>
-
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav h1 {
+  margin-right: auto;
+}
+nav a, nav button, nav span {
+  margin-left: 20px;
+}
+nav a {
+  color: #444;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav span {
+  color: #777;
+}
+button {
+  background:#00dba4;
+  border: 0;
+  padding: 6px 10px;
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+}
 </style>

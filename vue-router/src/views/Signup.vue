@@ -46,3 +46,30 @@ export default {
 }
 }
 </script>
+
+<style scoped>
+label {
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  font-size: var(--h4);
+}
+input {
+  width: 20rem;
+  height: 3rem;
+  font-size: var(--h4);
+}
+form button {
+  display: block;
+  margin-top: 20px;
+}
+form {
+  display: flex;
+  justify-content: center;
+}
+
+.center{
+  display: flex;
+  flex-direction: column;
+}
+</style>
