@@ -8,9 +8,7 @@ v-for="product in products"
 :image="product.image"
 :description="product.price"
 ></Card>
-      
     </div>
-    
   </div>
 </template>
 

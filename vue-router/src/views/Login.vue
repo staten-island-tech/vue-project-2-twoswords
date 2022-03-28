@@ -14,8 +14,6 @@
 
     </div>
   </form>
- 
-
 </template>
 
 <script>
@@ -61,6 +59,7 @@ input {
   font-size: var(--h4);
 }
 form button {
+  background:#00dba4;
   display: block;
   margin-top: 20px;
 }
