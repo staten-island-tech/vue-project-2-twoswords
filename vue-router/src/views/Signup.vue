@@ -1,7 +1,7 @@
 <template>
   <form @submit.prevent="handleSubmit">
 
-    <div>
+    <div class="center">
       <h2>Signup</h2>
 
     <label for="email">Email:</label>
