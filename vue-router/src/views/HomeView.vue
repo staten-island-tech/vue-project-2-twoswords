@@ -6,7 +6,7 @@ v-for="product in products"
 :key="product.name"
 :name="product.name"
 :image="product.image"
-:description="product.price"
+:description="product.description"
 ></Card>
     </div>
   </div>
@@ -38,12 +38,6 @@ export default {
     image: "",
     description: "dawjdnand",
 },
-{
-    name: "fnwfwekfn",
-    image: "",
-    description: "dawjdnand",
-},
-
 ]
     }
   }
@@ -54,7 +48,5 @@ export default {
 .product{
   display: flex;
   justify-content: space-evenly;
-  flex-wrap: wrap;
-  
 }
 </style>

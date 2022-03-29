@@ -21,9 +21,10 @@ export default {
 
 <style scoped>
 .card{
+    background-color: white ;
     margin-top: 2rem;
-    width: 30rem;
-    height: 30rem;
+    width: 35rem;
+    height: 35rem;
     border: 0.0625rem solid lightgray;
     border-radius: 1rem;
     box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.555);

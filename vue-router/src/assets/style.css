@@ -60,10 +60,6 @@ h3 {
 button {
   font-size: var(--h4);
 }
-.container {
-  margin: 0 auto;
-  padding: 0rem;
-}
 
 nav {
   display: flex;
