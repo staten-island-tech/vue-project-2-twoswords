@@ -6,6 +6,10 @@
     <div class="home-btn">
       <router-link to="/" class="link">Home</router-link>
     </div>
+
+    <div>
+      <router-link to="/addpost">New Post</router-link>
+    </div>
     
     <div v-if="user">
       <h3>Logged in as {{user.email}}</h3>
