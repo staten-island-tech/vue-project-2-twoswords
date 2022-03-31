@@ -8,7 +8,7 @@
     </div>
 
     <div>
-      <router-link to="/addpost">New Post</router-link>
+      <router-link to="/addpost" class="link">Add Post</router-link>
     </div>
     
     <div v-if="user">
