@@ -1,7 +1,6 @@
 <template>
     <div>
       <form v-on:submit="createPost">
-      <p>Fill in the form below to add a new post</p>
       
       <div class="form-control">
         <label for="title"> Post Title</label>
@@ -9,16 +8,18 @@
       </div>
 
       <div class="form-control">
+        <label for="cover"> Post Cover</label>
+        <input type="file" id="cover" v-on:change="handleFile"  />
+      </div> 
+      
+      <input type="submit" :disabled='isDisabled' value="Create Post" />
+
+      <div class="form-control">
         <label for="content"> Post Content</label>
         <textarea v-model="newPost.content" id="content" placeholder="your post content"/>
       </div>
 
-      <div class="form-control">
-        <label for="cover"> Post Cover</label>
-        <input type="file" id="cover" v-on:change="handleFile"  />
-      </div>
-
-      <input type="submit" :disabled='isDisabled' value="Create Post" />
+     
       </form>
 
       <p class="progress">Uploading file: {{fileProgress}} %</p>
