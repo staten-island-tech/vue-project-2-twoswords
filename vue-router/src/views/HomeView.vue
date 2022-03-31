@@ -1,14 +1,17 @@
 <template>
   <div class="home">
-    <div class="product">
-<Card
+
+<div class="product">
+  <Card
 v-for="product in products"
 :key="product.name"
 :name="product.name"
 :image="product.image"
 :description="product.description"
-></Card>
-    </div>
+>
+</Card>
+</div>
+
   </div>
 </template>
 
@@ -46,7 +49,8 @@ export default {
 
 <style scoped>
 .product{
-  display: flex;
-  justify-content: space-evenly;
+ display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 </style>
