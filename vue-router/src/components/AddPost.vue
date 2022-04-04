@@ -1,6 +1,6 @@
 <template>
     <div>
-      <form v-on:submit="createPost">
+      <form class="create-post" v-on:submit="createPost">
       
       <div class="form-control">
         <label for="title"> Post Title</label>
@@ -73,7 +73,7 @@ import firebase from "../firebase/config";
                 } 
                 firebase.createPost(d, _newPost)
                 .then(() => {
-                    this.$router.push({name: "Main"});
+                    this.$router.push({name: "home"});
                 }).catch(err => console.log(err));
            
            },
