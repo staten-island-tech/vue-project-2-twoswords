@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <Navbar />
-    <router-view/>
+    <router-link to="/">VueFirebase</router-link>
   </div>
 </template>
 
@@ -13,6 +13,5 @@ export default {
 </script>
 
 <style scoped>
-  background-color:aqua;
 
 </style>
