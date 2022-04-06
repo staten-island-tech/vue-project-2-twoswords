@@ -4,7 +4,7 @@
 
   
     <div class="home-btn">
-      <router-link to="/" class="link">Home</router-link>
+      <router-link to="/" class="link">Main</router-link>
     </div>
 
     <div>

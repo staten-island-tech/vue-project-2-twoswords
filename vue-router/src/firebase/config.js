@@ -1,5 +1,4 @@
 import * as firebase from "firebase/app";
-import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import "firebase/firestore";
 import "firebase/storage";
@@ -14,15 +13,9 @@ const firebaseConfig = {
   measurementId: "G-L25FJN57J8",
 };
 
-initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 
 class Firebase {
-  constructor() {
-    firebase.initializeApp(config);
-    this.firestore = firebase.firestore();
-    this.storage = firebase.storage();
-  }
-
   getAllPosts() {
     return firebase.firestore().collection("posts").get();
   }

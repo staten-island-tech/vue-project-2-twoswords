@@ -2,6 +2,7 @@
   <div class="container">
     <Navbar />
     <router-link to="/">VueFirebase</router-link>
+    <router-view/>
   </div>
 </template>
 
