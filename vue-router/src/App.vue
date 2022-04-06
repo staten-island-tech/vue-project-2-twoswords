@@ -13,6 +13,5 @@ export default {
 </script>
 
 <style scoped>
-  background-color:aqua;
 
 </style>

@@ -1,8 +1,8 @@
 <template>      
-    <form @submit.prevent="handleSubmit">
+   <form @submit.prevent="handleSubmit">
     <div class="center">
  <h2>Login</h2>
-
+      
     <label for="email">Email:</label>
     <input type="email" name="email" v-model="email" required>
 
@@ -14,6 +14,8 @@
 
     </div>
   </form>
+
+   
 
    
 </template>
