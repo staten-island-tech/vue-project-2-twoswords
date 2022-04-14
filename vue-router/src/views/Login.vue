@@ -9,7 +9,7 @@
     <label for="email">Password:</label>
     <input type="password" name="password" v-model="password" required>
 
-    <button>Login</button>
+    <Button>Login</Button>
     <h3 v-if="error">{{error}}</h3>
 
     </div>
@@ -21,12 +21,14 @@
 </template>
 
 <script>
+import Button from '../components/Button.vue'
 import { ref } from 'vue'
 import {useStore} from 'vuex'
 import{useRouter} from 'vue-router'
 export default {
   /*eslint-disable*/
   name: "Login",
+  components: {Button},
   setup() {
     const email = ref('')
     const password = ref('')

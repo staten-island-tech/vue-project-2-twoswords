@@ -23,6 +23,7 @@ export default {
 .card{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     background-color: white ;
     margin-top: 2rem;

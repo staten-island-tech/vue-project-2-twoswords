@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-
 <div class="product">
   <Card
 v-for="product in products"
@@ -9,6 +8,7 @@ v-for="product in products"
 :image="product.image"
 :description="product.description"
 >
+<Button @click="addItem(product)">Add to Cart</Button>
 </Card>
 </div>
 
@@ -17,11 +17,13 @@ v-for="product in products"
 
 <script>
 // @ is an alias to /src
+import Button from '../components/Button.vue'
 import Card from '../components/Card.vue'
 export default {
   name: 'HomeView',
   components: {
-    Card,
+    Card, 
+    Button
   },
   data: () => {
     return {
@@ -32,18 +34,27 @@ export default {
     description: "dawjdnand",
 },
 {
-    name: "fnwfwekfn",
+    name: "fdawdkfn",
     image: "",
-    description: "dawjdnand",
+    description: "dadwand",
 },
-{
-    name: "fnwfwekfn",
-    image: "",
-    description: "dawjdnand",
-},
+
 ]
     }
-  }
+  },
+  computed: {
+        carts() {
+            return this.$store.state.cart;
+        },
+    },
+     methods: {
+    addItem(product){
+      this.$store.commit("add", product);
+    },
+       removeItem(cart) {
+      this.$store.commit("remove", cart);
+    },  
+},
 }
 </script>
 

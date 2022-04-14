@@ -1,14 +1,15 @@
 <template>
   <nav class="navbar">
-    <h1>FireBase Blogs</h1>
-
+    <h1>FireBase</h1>
+<h2>Total:{{carts.length}}</h2>
+<Button @click="clear()">Clear Cart</Button>
     <div class="home-btn">
       <router-link to="/" class="link">Home</router-link>
     </div>
 
     <div v-if="user">
       <h3>Logged in as {{ user.email }}</h3>
-      <button @click="handleClick">Logout</button>
+      <Button @click="handleClick">Logout</Button>
     </div>
 
     <div v-if="!user" class="account">
@@ -23,8 +24,10 @@
 import { computed } from "vue";
 import { useStore } from "vuex";
 /*eslint-disable*/
+import Button from '../components/Button.vue'
 export default {
   name: "Navbar",
+  components: {Button},
   setup() {
     const store = useStore();
     const handleClick = () => {
@@ -36,6 +39,19 @@ export default {
       authIsReady: computed(() => store.state.authIsReady),
     };
   },
+  computed: {
+        carts() {
+            return this.$store.state.cart;
+        },
+    },
+     methods: {
+    addItem(product){
+      this.$store.commit("add", product);
+    },
+     clear() {
+      this.carts.splice(0);
+    },
+},
 };
 </script>
 
