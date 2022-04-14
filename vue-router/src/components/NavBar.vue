@@ -2,7 +2,7 @@
   <nav class="navbar">
     <h1>FireBase</h1>
 <h2>Total:{{carts.length}}</h2>
-<Button @click="clear()">Clear Cart</Button>
+<Button @click="clear()">Clear</Button>
     <div class="home-btn">
       <router-link to="/" class="link">Home</router-link>
     </div>
