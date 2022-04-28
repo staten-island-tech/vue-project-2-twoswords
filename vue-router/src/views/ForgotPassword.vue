@@ -1,33 +1,31 @@
 <template>      
-   <form @submit.prevent="handleSubmit">
+   <form @submit.prevent="forgotPassword">
     <div class="center">
- <h2>Login</h2>
+ <h2>Forgot Password</h2>
       
     <label for="email">Email:</label>
     <input type="email" name="email" v-model="email" required>
 
-    <label for="email">Password:</label>
-    <input type="password" name="password" v-model="password" required>
 
-    <Button>Login</Button>
+    <Button>Reset Password</Button>
     <h3 v-if="error">{{error}}</h3>
-<h3><router-link to="/Forgot">Forgot Password</router-link></h3>
+
     </div>
   </form>
 
    
-
    
 </template>
 
 <script>
+import firebase from 'firebase/app'
 import Button from '../components/Button.vue'
 import { ref } from 'vue'
 import {useStore} from 'vuex'
 import{useRouter} from 'vue-router'
 export default {
   /*eslint-disable*/
-  name: "Login",
+  name: "ForgotPassword",
   components: {Button},
   setup() {
     const email = ref('')
@@ -48,6 +46,18 @@ export default {
    }
     }
     return { handleSubmit, email, password, error }
+  },
+  methods:{
+      forgotPassword(){
+          firebase.auth().sendPasswordResetEmail(this.user.email, this.user.password).then(()=>{
+              alert('Check Your Email')
+            this.user={
+                email:''
+            }
+          }).catch((error)=>{
+              alert(error.message)
+          })
+      }
   }
 }
 </script>
