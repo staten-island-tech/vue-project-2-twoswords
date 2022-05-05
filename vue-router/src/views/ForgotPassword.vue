@@ -77,6 +77,8 @@ form button {
   background:#00dba4;
   display: block;
   margin-top: 20px;
+  width: 20rem;
+  height: 6rem;
 }
 form {
   display: flex;

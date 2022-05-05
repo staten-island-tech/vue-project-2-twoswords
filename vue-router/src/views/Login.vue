@@ -1,4 +1,4 @@
-<template>      
+<template>
    <form @submit.prevent="handleSubmit">
     <div class="center">
  <h2>Login</h2>
