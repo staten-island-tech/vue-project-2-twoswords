@@ -20,20 +20,21 @@
             </div>
             <label>Author:</label>
             <input type="text" v-model.lazy="post.author" required />
+            <button v-on:click.prevent="post">Add Blog</button>
         </form>
         <div v-if="submitted">
             <h3>Muy Xapowo</h3>
         </div>
         <div id="preview">
             <h3>Preview Post</h3>
-            <p>Post title: {{post.title}}</p>
-            <p>Post content:</p>
-            <p>{{post.content}}</p>
-            <p>Post Categories:</p>
+            <p id="p-title">Post title: {{post.title}}</p>
+            <p id="p-title">Post content:</p>
+            <p id="p-title">{{post.content}}</p>
+            <p id="p-title">Post Categories:</p>
             <ul>
-                <li>{{ category }}</li>
+                <li v-for="category in post.categories">{{ category }}</li>
             </ul>
-            <p>Author: {{ post.author }}</p>
+            <p id="p-title">Author: {{ post.author }}</p>
         </div>
     </div>
 </template>
@@ -51,7 +52,7 @@ export default{
             submitted: false
         }
     },
-    methods: {
+    methods:{
         // eslint-disable-next-line
         post: function(){
             this.$http.post('https://vue-firebase-1bc25-default-rtdb.firebaseio.com/posts.json', this.post).then(function(data){

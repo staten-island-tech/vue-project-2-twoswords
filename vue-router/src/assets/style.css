@@ -53,6 +53,15 @@ h3 {
   font-size: var(--h4);
 }
 
+#preview {
+  width: 20vh;
+  height: 20vh;
+}
+
+#p-title {
+  font-size: 3rem;
+}
+
 .link {
   font-size: var(--h4);
 }
