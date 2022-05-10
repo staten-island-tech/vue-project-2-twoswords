@@ -32,7 +32,7 @@
             <p id="p-title">{{post.content}}</p>
             <p id="p-title">Post Categories:</p>
             <ul>
-                <li v-for="category in post.categories">{{ category }}</li>
+                <li>{{ category }}</li>
             </ul>
             <p id="p-title">Author: {{ post.author }}</p>
         </div>
