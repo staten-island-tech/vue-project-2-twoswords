@@ -1,4 +1,4 @@
-<template>      
+<template>
    <form @submit.prevent="forgotPassword">
     <div class="center">
  <h2>Forgot Password</h2>
