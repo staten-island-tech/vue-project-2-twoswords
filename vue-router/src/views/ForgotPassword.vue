@@ -18,6 +18,7 @@
 </template>
 
 <script>
+import firebase from 'firebase/auth'
 import Button from '../components/Button.vue'
 import { ref } from 'vue'
 import {useStore} from 'vuex'
