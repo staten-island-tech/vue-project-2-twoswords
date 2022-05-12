@@ -7,7 +7,7 @@
     <input type="email" name="email" v-model="email" required>
 
 
-    <Button>Reset Password</Button>
+    <Button @click="sendEmail">Reset Password</Button>
     <h3 v-if="error">{{error}}</h3>
 
     </div>
@@ -19,44 +19,37 @@
 
 <script>
 import Button from '../components/Button.vue'
-import { ref } from 'vue'
-import {useStore} from 'vuex'
-import{useRouter} from 'vue-router'
 export default {
   /*eslint-disable*/
   name: "ForgotPassword",
   components: {Button},
-  setup() {
-    const email = ref('')
-    const password = ref('')
-    const error = ref(null)
-    const store = useStore()
-    const router = useRouter()
-
-    const handleSubmit = async () => {
-    try {
-     await store.dispatch('login', {
-       email: email.value,
-       password: password.value
-     })
-     router.push('/')
-   } catch(err){
-     error.value = err.message
-   }
-    }
-    return { handleSubmit, email, password, error }
-  },
+  data() {
+  return {
+    email: "",
+    error: null,
+    emailSending: false,
+  };
+},
   methods:{
-      forgotPassword(){
-          firebase.auth().sendPasswordResetEmail(this.user.email, this.user.password).then(()=>{
-              alert('Check Your Email')
-            this.user={
-                email:''
-            }
-          }).catch((error)=>{
-              alert(error.message)
-          })
-      }
+      sendEmail() {
+  if (!this.email) {
+    this.error = "Please type in a valid email address.";
+    return;
+  }
+  this.error = null;
+  this.emailSending = true;
+  firebase
+    .auth()
+    .sendPasswordResetEmail(this.email)
+    .then(() => {
+      this.emailSending = false;
+    })
+    .catch(error => {
+      this.emailSending = false;
+      this.error = error.message;
+    });
+}
+
   }
 }
 </script>
