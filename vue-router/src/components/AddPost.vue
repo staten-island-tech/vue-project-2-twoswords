@@ -15,7 +15,7 @@
                 <input type="checkbox" value="Story" v-model="post.categories"/>
                 <label>Recommendation</label>
                 <input type="checkbox" value="recommendation" v-model="post.categories"/>
-                <label>important  </label>
+                <label>important</label>
                 <input type="checkbox" value="important" v-model="post.categories"/>
             </div>
             <label>Author:</label>
@@ -53,8 +53,7 @@ export default{
         }
     },
     methods:{
-        // eslint-disable-next-line
-        post: function(){
+        cpost:function(){
             this.$http.post('https://vue-firebase-1bc25-default-rtdb.firebaseio.com/posts.json', this.post).then(function(data){
                 console.log(data);
                 this.submitted = true;
