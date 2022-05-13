@@ -28,11 +28,10 @@
         <div id="preview">
             <h3>Preview Post</h3>
             <p id="p-title">Post title: {{post.title}}</p>
-            <p id="p-title">Post content:</p>
-            <p id="p-title">{{post.content}}</p>
+            <p id="p-title">Post content: {{post.content}}</p>
             <p id="p-title">Post Categories:</p>
             <ul>
-                <li>{{ category }}</li>
+                <li v-for="category in post.categories" :key="category.id">{{ category }}</li>
             </ul>
             <p id="p-title">Author: {{ post.author }}</p>
         </div>
