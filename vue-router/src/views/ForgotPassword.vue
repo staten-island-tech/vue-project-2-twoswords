@@ -6,14 +6,11 @@
     <label for="email">Email:</label>
     <input type="email" name="email" v-model="email" required>
 
-
     <Button @click="sendEmail">Reset Password</Button>
     <h3 v-if="error">{{error}}</h3>
 
     </div>
-  </form>
-
-   
+  </form>   
    
 </template>
 
