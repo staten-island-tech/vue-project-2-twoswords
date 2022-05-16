@@ -172,3 +172,7 @@ form {
   margin: 0px;
   font-weight: bold;
 }
+
+#addpost {
+  display: flex;
+}
