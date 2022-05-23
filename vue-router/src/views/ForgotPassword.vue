@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import * as firebase from "firebase/app";
 import Button from '../components/Button.vue'
 export default {
   /*eslint-disable*/
@@ -35,9 +36,7 @@ export default {
   }
   this.error = null;
   this.emailSending = true;
-  firebase
-    .auth()
-    .sendPasswordResetEmail(this.email)
+    firebase.auth().sendPasswordResetEmail(this.email)
     .then(() => {
       this.emailSending = false;
     })
