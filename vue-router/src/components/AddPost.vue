@@ -1,7 +1,6 @@
 <template>
-    <div id="addpost">
-        <div class="create">
-          <h2>Create Post</h2>
+    <div id="add-post">
+        <h2>Create Post</h2>
         <form v-if="!submitted">
             <label>Post Title:</label>
             <input type="text" v-model.lazy="post.title" required />
@@ -25,16 +24,15 @@
         </form>
         <div v-if="submitted">
             <h3>Muy Xapowo</h3>
-        </div>  
         </div>
-        
         <div id="preview">
             <h3>Preview Post</h3>
             <p id="p-title">Post title: {{post.title}}</p>
-            <p id="p-title">Post content: {{post.content}}</p>
+            <p id="p-title">Post content:</p>
+            <p id="p-title">{{post.content}}</p>
             <p id="p-title">Post Categories:</p>
             <ul>
-                <li v-for="category in post.categories" :key="category.id" id="p-title">{{ category }}</li>
+                <li>{{ category }}</li>
             </ul>
             <p id="p-title">Author: {{ post.author }}</p>
         </div>
