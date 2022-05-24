@@ -41,15 +41,16 @@ export default {
   data: () => {
     return {
    cities: [],
-      selectedDoc: null,
-    }
+    };
   },
+  
      methods: {
     async fetchCities() {
       let citiesSnapShot = await getDocs(citiesColRef);
       let cities = [];
       citiesSnapShot.forEach((city) => {
         let cityData = city.data();
+        cityData.name = city.name;
         cityData.id = city.id;
         cities.push(cityData);
       });
