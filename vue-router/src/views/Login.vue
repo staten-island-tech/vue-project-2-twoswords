@@ -1,30 +1,34 @@
-<template>      
-  <form @submit.prevent="handleSubmit">
+<template>
+   <form @submit.prevent="handleSubmit">
     <div class="center">
  <h2>Login</h2>
-
+      
     <label for="email">Email:</label>
     <input type="email" name="email" v-model="email" required>
 
     <label for="email">Password:</label>
     <input type="password" name="password" v-model="password" required>
 
-    <button>Login</button>
+    <Button>Login</Button>
     <h3 v-if="error">{{error}}</h3>
-
+<h3><router-link to="/Forgot">Forgot Password</router-link></h3>
     </div>
   </form>
- 
 
+   
+
+   
 </template>
 
 <script>
+import Button from '../components/Button.vue'
 import { ref } from 'vue'
 import {useStore} from 'vuex'
 import{useRouter} from 'vue-router'
 export default {
   /*eslint-disable*/
   name: "Login",
+  components: {Button},
   setup() {
     const email = ref('')
     const password = ref('')
@@ -49,4 +53,29 @@ export default {
 </script>
 
 <style scoped>
+label {
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  font-size: var(--h4);
+}
+input {
+  width: 20rem;
+  height: 3rem;
+  font-size: var(--h4);
+}
+form button {
+  background:#00dba4;
+  display: block;
+  margin-top: 20px;
+}
+form {
+  display: flex;
+  justify-content: center;
+}
+
+.center{
+  display: flex;
+  flex-direction: column;
+}
 </style>
