@@ -22,7 +22,6 @@
             </li>
           </ul>
         </div>
-
     </div>
   </div>
 </template>
@@ -44,16 +43,19 @@ export default {
       selectedDoc: null,
     }
   },
+  mounted(){this.fetchCities()},
      methods: {
     async fetchCities() {
       let citiesSnapShot = await getDocs(citiesColRef);
       let cities = [];
       citiesSnapShot.forEach((city) => {
         let cityData = city.data();
+        //Object.keys(city)
+        console.log(city.data())
         cityData.id = city.id;
         cities.push(cityData);
       });
-      console.log(cities);
+     // console.log(cities);
       this.cities = cities;
     },
     async deleteCity(cityId) {
