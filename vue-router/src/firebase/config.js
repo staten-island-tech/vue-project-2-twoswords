@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { getFirestore, collection } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyD1gaFf9UERH0omOvumJkflguGVJ79OB3o",
@@ -11,8 +12,11 @@ const firebaseConfig = {
   measurementId: "G-L25FJN57J8",
 };
 
-initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 
 const auth = getAuth();
+const db = getFirestore(app);
+const citiesColRef = collection(db, "cities");
 
 export { auth };
+export default citiesColRef;

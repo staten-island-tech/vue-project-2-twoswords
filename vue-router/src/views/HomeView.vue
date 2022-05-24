@@ -1,59 +1,67 @@
 <template>
   <div class="home">
-<div class="product">
-  <Card
-v-for="product in products"
-:key="product.name"
-:name="product.name"
-:image="product.image"
-:description="product.description"
->
-<Button @click="addItem(product)">Add</Button>
-</Card>
-</div>
+    <h2>Cities</h2>
+    <div class="container">
+      <div class="row">
+  
+          <ul class="list-group">
+            <li
+              v-for="city in cities"
+              :key="city.id"
+            >
+              {{ city.name }}
+              <span class="badge badge-primary badge-pill">
+                <router-link
+                  :to="{ path: `/cities/${city.id}` }"
+                  class="btn btn-primary ml-2"
+                  >Edit</router-link
+                >
+                <Button @click="deleteCity(city.id)"
+                  >Delete</Button>
+              </span>
+            </li>
+          </ul>
+        </div>
 
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
+import citiesColRef from "../firebase/config";
+import { getDocs, doc, deleteDoc } from "firebase/firestore";
+
 import Button from '../components/Button.vue'
-import Card from '../components/Card.vue'
 export default {
   name: 'HomeView',
   components: {
-    Card, 
     Button
   },
   data: () => {
     return {
-      products: [
-{
-    name: "fnwfwekfn",
-    image: "",
-    description: "dawjdnand",
-},
-{
-    name: "fdawdkfn",
-    image: "",
-    description: "dadwand",
-},
-
-]
+   cities: [],
+      selectedDoc: null,
     }
   },
-  computed: {
-        carts() {
-            return this.$store.state.cart;
-        },
-    },
      methods: {
-    addItem(product){
-      this.$store.commit("add", product);
+    async fetchCities() {
+      let citiesSnapShot = await getDocs(citiesColRef);
+      let cities = [];
+      citiesSnapShot.forEach((city) => {
+        let cityData = city.data();
+        cityData.id = city.id;
+        cities.push(cityData);
+      });
+      console.log(cities);
+      this.cities = cities;
     },
-       removeItem(cart) {
-      this.$store.commit("remove", cart);
-    },  
+    async deleteCity(cityId) {
+      let cityRef = doc(citiesColRef, cityId);
+      await deleteDoc(cityRef);
+      alert("City deleted successully!");
+      this.$router.go();
+    },
 },
 }
 </script>

@@ -6,7 +6,6 @@ const store = createStore({
     state: {
         user: null,
         authIsReady:false,
-        cart: [],
     },
     mutations: {
         setUser(state, payload) {
@@ -16,12 +15,6 @@ const store = createStore({
         setAuthIsReady(state, payload) {
             state.authIsReady = payload
         },
-        add(state, product) {
-            state.cart.push(product);
-          },
-          remove(state, product) {
-            state.cart.splice(product, 1);
-          },
     },
     actions: {
         async signup(context, {email, password}) {
