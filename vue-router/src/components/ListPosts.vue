@@ -1,10 +1,10 @@
 <template>
   <div id="showposts">
-    <h1>All Posts</h1>
-    <input type="text" v-model="search" placeholder="search posts">
-    <div v-for="post in posts" :key="post.id" class="singlepost">
+    <h1>List Post Titles</h1>
+    <input type="text" v-model="search" placeholder="search blogs">
+    <div v-for="post in posts" :key="post.id" class="singleblog">
       <router-link v-bind:to="'/post/' + post.id"><h2>{{post.title | to-uppercase}}</h2></router-link>
-      <article>{{post.content | snippet}}</article>
+
     </div>
   </div>
 </template>
@@ -35,13 +35,8 @@ export default {
       })
     },
     computed:{
-    },
-    filters:{
-      toUppercase(value){
-        return value.toUpperCase();
-      }
+
     },
     mixins:[searchMixin]
   }
 </script>
-
