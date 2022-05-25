@@ -2,17 +2,11 @@
   <div class="home">
     <h2>Cities</h2>
     <div class="container">
-          <Card
-              v-for="city in cities"
-              :key="city.id"
-              :name="city.name"
-              :country="city.country"
-            >
-              <span>
-                <Button @click="deleteCity(city.id)"
-                  >Delete</Button>
-              </span>
-              </Card>
+          <Card v-for="city in cities" :key="city.id" :name="city.name" :country="city.country">
+            <span>
+              <Button @click="deleteCity(city.id)">Delete</Button>
+            </span>
+          </Card>
 
     </div>
   </div>
