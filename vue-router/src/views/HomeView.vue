@@ -9,7 +9,6 @@
         :country="city.country"
       >
         <span>
-          
           <Button @click="deleteCity(city.id)">Delete</Button>
         </span>
       </Card>
@@ -64,6 +63,7 @@ export default {
 <style scoped>
 .container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
 }
 </style>
