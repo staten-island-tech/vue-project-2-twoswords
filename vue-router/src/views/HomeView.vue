@@ -9,7 +9,7 @@
         :name="city.name"
         :country="city.country" 
       >
-          <router-link :to="{path: '/cities/${cityData.id}' }" class="link">Edit</router-link>
+          <router-link :to="{path: '/cities/${city.id}' }" class="link">Edit</router-link>
           <Button @click="deleteCity(city.id)">Delete</Button>
       </Card>
     </div>
