@@ -7,8 +7,8 @@
       <router-link to="/add-city" class="link">Add</router-link>
     </div>
 
-    <div v-if="user">
-      <h3>Logged in as {{ user.email }}</h3>
+    <div v-if="user" class="logged">
+      <h3 class="logas">{{ user.email.split('@') [0] }}</h3>
       <Button @click="handleClick">Logout</Button>
     </div>
 

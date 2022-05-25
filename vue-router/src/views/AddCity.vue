@@ -10,7 +10,7 @@
             <div class="form-group">
               <textarea type="text" class="form-control" id="text" placeholder="Type something here..." v-model="country"></textarea>
             </div>
-            <button class="addbtn">Create City</button>
+            <button class="addbtn">Create Post</button>
           </form>
         </div>
     </div>
