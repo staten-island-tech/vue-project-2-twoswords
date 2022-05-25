@@ -4,10 +4,23 @@
 
     <div class="home-btn">
       <router-link to="/" class="link">Home</router-link>
-      <router-link to="/add-city" class="link">Add</router-link>
     </div>
 
-    <div v-if="user">
+  
+
+   <div v-if="user" >
+    <router-link to="/add-city" class="link">Add</router-link>
+     
+    </div>
+   
+   
+   
+   
+   
+   
+   
+    <div v-if="user" >
+    
       <h3>Logged in as {{ user.email }}</h3>
       <Button @click="handleClick">Logout</Button>
     </div>
