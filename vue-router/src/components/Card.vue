@@ -1,8 +1,7 @@
 <template>
     <div class="card">
         <h2>{{name}}</h2>
-        <img :src="image" alt="">
-        <h2>{{description}}</h2>
+        <h2>{{country}}</h2>
         <span><slot></slot></span>
     </div>
 </template>
@@ -14,7 +13,7 @@ export default {
     props: {
         name: String,
         image: String,
-        description: String,
+        country: String,
     },
 }
 </script>
@@ -23,7 +22,8 @@ export default {
 .card{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
     background-color: white ;
     margin-top: 2rem;

@@ -2,26 +2,22 @@
   <div class="home">
     <h2>Cities</h2>
     <div class="container">
-      <div class="row">
-  
-          <ul class="list-group">
-            <li
+          <Card
               v-for="city in cities"
               :key="city.id"
+              :name="city.name"
+              :country="city.country"
             >
-              {{ city.name }}
-              <span class="badge badge-primary badge-pill">
-                <router-link
-                  :to="{ path: `/cities/${city.id}` }"
-                  class="btn btn-primary ml-2"
+              <span>
+                <router-link 
+                  :to="{path: '/cities/${cities.id}'}" class="link"
                   >Edit</router-link
                 >
                 <Button @click="deleteCity(city.id)"
                   >Delete</Button>
               </span>
-            </li>
-          </ul>
-        </div>
+              </Card>
+
     </div>
   </div>
 </template>
@@ -30,11 +26,12 @@
 // @ is an alias to /src
 import citiesColRef from "../firebase/config";
 import { getDocs, doc, deleteDoc } from "firebase/firestore";
-
+import Card from '../components/Card.vue';
 import Button from '../components/Button.vue'
 export default {
   name: 'HomeView',
   components: {
+    Card,
     Button
   },
   data: () => {
@@ -43,20 +40,18 @@ export default {
       selectedDoc: null,
     }
   },
-  mounted(){this.fetchCities()},
      methods: {
     async fetchCities() {
       let citiesSnapShot = await getDocs(citiesColRef);
       let cities = [];
       citiesSnapShot.forEach((city) => {
         let cityData = city.data();
-        //Object.keys(city)
-        console.log(city.data())
+        console.log(cityData)
         cityData.id = city.id;
         cities.push(cityData);
       });
-     // console.log(cities);
-      this.cities = cities;
+     console.log(cities);
+     this.cities = cities;
     },
     async deleteCity(cityId) {
       let cityRef = doc(citiesColRef, cityId);
@@ -65,11 +60,14 @@ export default {
       this.$router.go();
     },
 },
+created(){
+  this.fetchCities();
+}
 }
 </script>
 
 <style scoped>
-.product{
+.container{
  display: flex;
   justify-content: space-evenly;
 }
