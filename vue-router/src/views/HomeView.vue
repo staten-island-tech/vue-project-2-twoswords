@@ -5,9 +5,11 @@
       <Card
         v-for="city in cities"
         :key="city.id"
+        :id="city.id"
         :name="city.name"
-        :country="city.country"
+        :country="city.country" 
       >
+          <router-link :to="{path: '/cities/${cityData.id}' }" class="link">Edit</router-link>
           <Button @click="deleteCity(city.id)">Delete</Button>
       </Card>
     </div>
@@ -29,6 +31,7 @@ export default {
   data: () => {
     return {
       cities: [],
+      selectedDoc: null
     };
   },
 

@@ -3,7 +3,6 @@
         <h2 class="cardname">{{name}}</h2>
         <h2 class="cardcontent">{{country}}</h2>
         <span><slot></slot></span>
-        <router-link :to="'/cities/${city.id}'" class="link">Edit</router-link>
     </div>
 </template>
 
@@ -14,8 +13,11 @@ export default {
     props: {
         name: String,
         image: String,
+        id: String,
         country: String,
     },
+    computed: {
+    }
 
 }
 </script>

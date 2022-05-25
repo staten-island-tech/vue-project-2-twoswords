@@ -2,7 +2,7 @@
   <div>
     <div class="container">
       <div class="row">
-        <div class="col-md-6 offset-md-3">
+        <div>
           <h2>Edit City</h2>
           <form @submit.prevent="updateCity">
             <div class="form-group">
