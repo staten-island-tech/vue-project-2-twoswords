@@ -1,32 +1,18 @@
 <template>
   <div>
     <div class="container">
-      <div class="row">
-
-          <h2>Add City</h2>
-          <form @submit.prevent="createCity">
-            <div class="form-group">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Title"
-                v-model="name"
-              />
+      <div class="add-post">
+        <h2 class="headeradd">Add New Post</h2>
+          <form @submit.prevent="createCity" class="addform">
+            <div class="form-2group">
+              <input type="text" class="form-control" placeholder="Title" v-model="name"/>
             </div>
-            
             <div class="form-group">
-              <textarea
-              type="text"
-                class="form-control"
-                id="text"
-                placeholder="Type something here..."
-                v-model="country"
-              ></textarea>
+              <textarea type="text" class="form-control" id="text" placeholder="Type something here..." v-model="country"></textarea>
             </div>
-            <button>Create City</button>
+            <button class="addbtn">Create City</button>
           </form>
         </div>
-
     </div>
   </div>
 </template>
