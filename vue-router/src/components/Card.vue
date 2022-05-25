@@ -3,7 +3,7 @@
         <h2 class="cardname">{{name}}</h2>
         <h2 class="cardcontent">{{country}}</h2>
         <span><slot></slot></span>
-        <router-link :to="{path: '/cities/${city.id}'}" class="link">Edit</router-link>
+        <router-link :to="'/cities/${city.id}'" class="link">Edit</router-link>
     </div>
 </template>
 

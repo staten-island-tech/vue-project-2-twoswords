@@ -8,9 +8,7 @@
         :name="city.name"
         :country="city.country"
       >
-        <span>
           <Button @click="deleteCity(city.id)">Delete</Button>
-        </span>
       </Card>
     </div>
   </div>
