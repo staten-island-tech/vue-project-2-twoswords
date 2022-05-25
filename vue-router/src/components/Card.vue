@@ -1,14 +1,25 @@
 <template>
     <div class="card">
         <h2 class="cardname">{{name}}</h2>
-        <h2 class="cardcontent">{{country}}</h2>
+        <article class="cardcontent">{{country.substring(0,100)+".." }}</article>
         <span><slot></slot></span>
         <router-link :to="{path: '/cities/${city.id}'}" class="link">Edit</router-link>
+        <button id="show-modal" @click="showModal = true">Show Modal</button>
+
+  <Teleport to="body">
+    <!-- use the modal component, pass in the prop -->
+    <modal :show="showModal" @close="showModal = false">
+      <template #header>
+        <h3>custom header</h3>
+      </template>
+    </modal>
+  </Teleport>
     </div>
 </template>
 
 <script>
 /* eslint-disable */
+import Modal from './Modal-card.vue'
 export default {
     name: "Card",
     props: {
@@ -16,6 +27,14 @@ export default {
         image: String,
         country: String,
     },
+    components: {
+    Modal
+  },
+  data() {
+    return {
+      showModal: false
+    }
+  }
 }
 </script>
 
@@ -28,8 +47,9 @@ export default {
     align-items: center;
     background-color: white ;
     margin-top: 2rem;
-    width: 150rem;
-    height: 40rem;
+    width: 50rem;
+    height: 20rem;
+    margin-left: 10rem;
     border: 0.0625rem solid lightgray;
     border-radius: 1rem;
     box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.555);
