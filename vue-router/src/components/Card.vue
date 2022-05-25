@@ -3,6 +3,8 @@
         <h2>{{name}}</h2>
         <h2>{{country}}</h2>
         <span><slot></slot></span>
+        <router-link :to="'/cities/:city.id'" class="link"
+            >Edit</router-link>
     </div>
 </template>
 
@@ -15,6 +17,7 @@ export default {
         image: String,
         country: String,
     },
+
 }
 </script>
 
