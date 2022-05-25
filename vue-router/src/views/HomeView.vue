@@ -9,10 +9,6 @@
               :country="city.country"
             >
               <span>
-                <router-link 
-                  :to="{path: '/cities/${cities.id}'}" class="link"
-                  >Edit</router-link
-                >
                 <Button @click="deleteCity(city.id)"
                   >Delete</Button>
               </span>
@@ -69,6 +65,7 @@ created(){
 <style scoped>
 .container{
  display: flex;
-  justify-content: space-evenly;
+ flex-wrap: wrap;
+ justify-content: space-evenly;
 }
 </style>

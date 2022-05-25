@@ -1,8 +1,9 @@
 <template>
     <div class="card">
-        <h2>{{name}}</h2>
-        <h2>{{country}}</h2>
+        <h2 class="cardname">{{name}}</h2>
+        <h2 class="cardcontent">{{country}}</h2>
         <span><slot></slot></span>
+        <router-link :to="{path: '/cities/${city.id}'}" class="link">Edit</router-link>
     </div>
 </template>
 
@@ -27,7 +28,7 @@ export default {
     align-items: center;
     background-color: white ;
     margin-top: 2rem;
-    width: 40rem;
+    width: 150rem;
     height: 40rem;
     border: 0.0625rem solid lightgray;
     border-radius: 1rem;
