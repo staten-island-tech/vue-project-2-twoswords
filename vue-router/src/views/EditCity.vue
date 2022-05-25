@@ -8,28 +8,20 @@
             <div class="form-group">
               <input
                 type="text"
-                class="form-control mb-2"
-                placeholder="City"
+                placeholder="Title"
                 v-model="cityInfo.name"
               />
             </div>
-            <div class="form-group">
-              <input
-                type="text"
-                class="form-control mb-2"
-                placeholder="County"
-                v-model="cityInfo.county"
-              />
-            </div>
-            <div class="form-group">
-              <input
-                type="text"
-                class="form-control mb-2"
-                placeholder="Country"
+         <div class="form-group">
+              <textarea
+              type="text"
+                class="form-control"
+                id="text"
+                placeholder="Type something here..."
                 v-model="cityInfo.country"
-              />
+              ></textarea>
             </div>
-            <button class="btn btn-primary">Update City</button>
+            <button>Update City</button>
           </form>
         </div>
       </div>
@@ -50,7 +42,6 @@ export default {
       cityInfo: {
         name: null,
         county: null,
-        country: null,
       },
     };
   },
