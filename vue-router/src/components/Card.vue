@@ -56,6 +56,7 @@ export default {
 img {
   width: 50%;
   height: 70%;
+  object-fit: cover;
 }
 .back {
   padding: 1rem;
