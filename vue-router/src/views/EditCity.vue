@@ -9,6 +9,9 @@
               <input type="text" class="form-control mb-2" placeholder="City" v-model="cityInfo.name"/>
             </div>
             <div class="form-group">
+              <input type="text" class="form-control mb-2" placeholder="img" v-model="cityInfo.image"/>
+            </div>
+            <div class="form-group">
               <input type="text" class="form-control mb-2" placeholder="Country" v-model="cityInfo.country"/>
             </div>
             <button class="btn btn-primary">Update City</button>
@@ -32,6 +35,7 @@ export default {
       cityInfo: {
         name: null,
         country: null,
+        image: null,
       },
     };
   },
@@ -42,7 +46,7 @@ export default {
       let city = await getDoc(this.docRef);
       let cityData = city.data();
       this.cityInfo.name = cityData.name;
-      this.cityInfo.county = cityData.county;
+      this.cityInfo.image = cityData.image;
       this.cityInfo.country = cityData.country;
     },
     async updateCity() {

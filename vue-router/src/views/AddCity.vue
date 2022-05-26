@@ -7,6 +7,9 @@
             <div class="form-2group">
               <input type="text" class="form-control" placeholder="Title" v-model="name"/>
             </div>
+            <div class="form-2group">
+              <input type="text" class="form-control" placeholder="Image Address" v-model="image"/>
+            </div>
             <div class="form-group">
               <textarea type="text" class="form-control" id="text" placeholder="Type something here..." v-model="country"></textarea>
             </div>
@@ -26,6 +29,7 @@ export default {
     return {
       name: null,
       country: null,
+      image:null,
     };
   },
   methods: {

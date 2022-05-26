@@ -2,8 +2,12 @@
     <div class="card">
         <h2>{{name}}</h2>
         <img :src="image" alt="">
-        <h2>{{description}}</h2>
-        <span><slot></slot></span>
+        <h2>{{country}}</h2>
+        <span class="badge badge-primary badge-pill">
+                <router-link :to="{ path: `/cities/${city.id}` }" class="btn btn-primary ml-2">Edit</router-link>
+                <Button @click="deleteCity(city.id)"
+                  >Delete</Button>
+              </span>
     </div>
 </template>
 
@@ -14,7 +18,7 @@ export default {
     props: {
         name: String,
         image: String,
-        description: String,
+        country: String,
     },
 }
 </script>
