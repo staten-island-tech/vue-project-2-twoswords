@@ -3,15 +3,14 @@
     <h2>Cities</h2>
     <div class="container">
           <div class="cardlist" v-for="city in cities" :key="city.id" :image="city.image">
-             <h3 class="cardtitle">{{ city.name }}</h3> 
+             <h2 class="cardtitle">{{ city.name }}</h2> 
              <div class="cardinfo"> 
                <img class="cardimage" src="https://cdn.novelupdates.com/images/2017/07/thestrongestsystem.jpg" alt="">
-               <p class="cardcontent">{{city.country.substring(0,100)+".."}}</p>
+               <p class="cardcontent">{{city.country.substring(0,5000)+""}}</p>
             </div>
               <span class="badge badge-primary badge-pill">
-                <router-link :to="{ path: `/cities/${city.id}` }" class="btn btn-primary ml-2">Edit</router-link>
-                <Button @click="deleteCity(city.id)"
-                  >Delete</Button>
+                <router-link :to="{ path: `/cities/${city.id}` }" class="cardbtn">Edit</router-link>
+                <Button class="cardbtn" @click="deleteCity(city.id)">Delete</Button>
               </span>
           </div>
     </div>
@@ -75,14 +74,15 @@ export default {
     font-weight: bold;
     flex-wrap: wrap;
     align-items: center;
-    background-color: white ;
+    background-color: rgb(227, 243, 255) ;
     margin-top: 5rem;
     width: 100rem;
-    height: 40rem;
+    height: 49rem;
     border: 0.0625rem solid lightgray;
     border-radius: 1rem;
     box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.555);
     margin: 0.5rem auto;
+    margin-top: 4rem;
     align-items: center;
     position: relative;
 }
@@ -100,12 +100,18 @@ export default {
 }
 
 .cardcontent{
-  font-size: 1rem;
+  font-size: 1.5rem;
+  width: 70rem;
+  margin-left: 5rem;
+  border-radius: 1rem;
+  background-color: rgb(227, 227, 227);
+  padding: 1.5rem;
 }
 
 img {
   width: 20rem;
-  height: 20rem;
+  border-radius: 1rem;
+
 }
 
 .carddata{
@@ -113,12 +119,26 @@ img {
   flex-direction: column;
 }
 
+.cardbtn{
+  background: #00dba4;
+  border: 0;
+  padding: .5rem .8rem;
+  border-radius: 2rem;
+  color: #fff;
+  cursor: pointer;
+  font-size: var(--h4);
+}
+
 .cardinfo{
  display: flex;
  justify-content: center;
  margin-top: 1rem;
  margin-bottom: 1rem;
- height: 30rem;
- border: 0.0625rem solid rgb(143, 109, 109);
+ width: 90rem;
+ height: 35rem;
+ padding: 2.5rem;
+ border: 0.0625rem solid rgb(166, 166, 166);
+ border-radius: 1rem;
+ background-color: rgb(252, 228, 228);
 }
-</style>
+</style>2
