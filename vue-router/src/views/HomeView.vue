@@ -3,7 +3,7 @@
     <div class="container">
 
           <Card v-for="city in cities" :key="city.id" :name="city.name" :image="city.image" :country="city.country">
-                  <router-link :to="{path: '/cities/${city.id}'}" class="link">Edit</router-link>
+                  <router-link :to="{path: `/cities/${city.id}`}" class="link">Edit</router-link>
               <Button @click="deleteCity(city.id)">Delete</Button>
           </Card>   
      
