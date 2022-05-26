@@ -6,6 +6,7 @@
             <span>
                   <router-link :to="{path: '/cities/${city.id}'}" class="link">Edit</router-link>
               <Button @click="deleteCity(city.id)">Delete</Button>
+              <router-link :to="{path: '/cities/${cities.id}'}" class="link">Edit</router-link>
             </span>
           </Card>   
      
