@@ -52,7 +52,6 @@ export default {
       let city = await getDoc(this.docRef);
       let cityData = city.data();
       this.cityInfo.name = cityData.name;
-      this.cityInfo.county = cityData.county;
       this.cityInfo.country = cityData.country;
     },
     async updateCity() {

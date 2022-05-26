@@ -5,6 +5,7 @@
           <Card v-for="city in cities" :key="city.id" :name="city.name" :country="city.country">
             <span>
               <Button @click="deleteCity(city.id)">Delete</Button>
+              <router-link :to="{path: '/cities/${cities.id}'}" class="link">Edit</router-link>
             </span>
           </Card>
 
