@@ -1,16 +1,12 @@
 <template>
-<div>
-  <div class="card">  
- <h2 class="cardname">{{name}}</h2>
-        <img :src="image" alt="">
-        <div class="back">
-        <h2 class="cardcontent">{{country}}</h2>  
-  </div>
+    <div class="card">
+        <h2 class="cardname">{{name}}</h2>
+        <img class="cardimg" :src="image" alt="">
         <span><slot></slot></span>
+        <div class="back">
+          <h2 class="cardcontent">{{country}}</h2>
+          </div>
     </div>
-
- 
-</div>
     
 
 </template>
@@ -44,6 +40,9 @@ export default {
     margin-top: 5rem;
     width: 40rem;
     height: 40rem;
+    border: 0.0625rem solid lightgray;
+    border-radius: 1rem;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.555);
     transition-duration: all ease 2s;
     margin: 0.5rem auto;
   align-items: center;
