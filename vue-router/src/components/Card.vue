@@ -3,6 +3,7 @@
         <h2 class="cardname">{{name}}</h2>
         <img :src="image" alt="">
         <span><slot></slot></span>
+        
 
   <Teleport to="body">
     <!-- use the modal component, pass in the prop -->
@@ -44,6 +45,7 @@ export default {
     flex-wrap: wrap;
     align-items: center;
     background-color: white ;
+    margin-top: 5rem;
     width: 40rem;
     height: 30rem;
     border: 0.0625rem solid lightgray;

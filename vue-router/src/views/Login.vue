@@ -11,7 +11,6 @@
 
     <Button>Login</Button>
     <h3 v-if="error">{{error}}</h3>
-<h3><router-link to="/Forgot">Forgot Password</router-link></h3>
     </div>
   </form>
 

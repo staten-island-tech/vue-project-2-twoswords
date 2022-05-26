@@ -3,8 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6 offset-md-3">
-          <h2>Edit City</h2>
-          <form @submit.prevent="updateCity">
+          <form @submit.prevent="updateCity" class="addform">
             <div class="form-group">
               <input
                 type="text"
@@ -21,7 +20,7 @@
                 v-model="cityInfo.country"
               ></textarea>
             </div>
-            <button>Update City</button>
+            <button class="addbtn">Update City</button>
           </form>
         </div>
       </div>

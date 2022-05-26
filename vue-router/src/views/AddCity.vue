@@ -2,7 +2,6 @@
   <div>
     <div class="container">
       <div class="add-post">
-        <h2 class="headeradd">Add New Post</h2>
           <form @submit.prevent="createCity" class="addform">
             <div class="form-2group">
               <input type="text" class="form-control" placeholder="Title" v-model="name"/>

@@ -148,9 +148,6 @@ form {
   border: solid rgb(250, 208, 208) 0.2rem;
 }
 
-.headeradd {
-  padding-left: 5rem;
-}
 
 textarea {
   width: 60rem;
@@ -184,7 +181,7 @@ textarea {
 }
 
 .cardname {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .cardcontent {
