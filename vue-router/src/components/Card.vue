@@ -53,7 +53,13 @@ export default {
  display: flex;
  flex-wrap: wrap;
  justify-content: space-evenly;
+ 
 }
+
+.container:hover{
+transform: scale(1.02);
+}
+
 img {
   width: 20rem;
   border-radius: 1rem;
@@ -108,6 +114,7 @@ img {
   border-radius: 1rem;
   background-color: rgb(227, 227, 227);
   padding: 1.5rem;
+  box-shadow: .2rem .2rem .2rem rgba(0, 0, 0, 0.555);
 }
 
 </style>
