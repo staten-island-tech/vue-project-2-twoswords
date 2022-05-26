@@ -75,12 +75,12 @@ img {
   transform: rotateY(180deg);
 }
 
-.card:hover {
+.card:focus {
   transform:  rotateY(180deg);
   transition: all 3s ease;
 }
 
-.card:hover .back {
+.card:focus .back {
   transform: rotateY(180deg);
 }
 
