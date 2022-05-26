@@ -15,7 +15,7 @@ export default {
 button{
   width: 14rem;
   height: 5rem;
-  background-color: aquamarine;
+  background-color: #000000;
   font-size: 2rem; 
 }
 </style>

@@ -1,18 +1,9 @@
-<script>
-export default {
-  props: {
-    show: Boolean
-  }
-}
-</script>
-
-
 <template>
   <Transition name="modal">
     <div v-if="show" class="modal-mask">
       <div class="modal-wrapper">
         <div class="modal-container">
-          <h1>yo</h1>
+          <h2>{{country}}</h2>
            <button class="modal-default-button" @click="$emit('close')">OK</button>
         </div>
       </div>
@@ -20,10 +11,19 @@ export default {
   </Transition>
 </template>
 
+
+<script>
+export default {
+  props: {
+    show: Boolean,
+    country: String,
+  }
+}
+</script>
+
 <style>
 .modal-mask {
   position: fixed;
-  z-index: 9998;
   top: 0;
   left: 0;
   width: 100%;
@@ -39,7 +39,8 @@ export default {
 }
 
 .modal-container {
-  width: 300px;
+  width: 60rem;
+  height: 50rem;
   margin: 0px auto;
   padding: 20px 30px;
   background-color: #fff;
@@ -60,15 +61,6 @@ export default {
 .modal-default-button {
   float: right;
 }
-
-/*
- * The following styles are auto-applied to elements with
- * transition="modal" when their visibility is toggled
- * by Vue.js.
- *
- * You can easily play with the modal transition by editing
- * these styles.
- */
 
 .modal-enter-from {
   opacity: 0;

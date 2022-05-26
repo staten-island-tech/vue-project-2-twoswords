@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar">
-    <h1>FireBase</h1>
+    <h1>FireBase Book Library</h1>
 
     <div class="home-btn">
       <router-link to="/" class="link">Home</router-link>
