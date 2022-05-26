@@ -1,7 +1,7 @@
 <template>
     <div class="card" id="show-modal" @click="showModal = true">
         <h2 class="cardname">{{name}}</h2>
-        <img :src="image" alt="">
+        <img class="cardimg" :src="image" alt="">
         <span><slot></slot></span>
         
 
@@ -47,7 +47,7 @@ export default {
     background-color: white ;
     margin-top: 5rem;
     width: 40rem;
-    height: 30rem;
+    height: 50rem;
     border: 0.0625rem solid lightgray;
     border-radius: 1rem;
     box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.555);
@@ -56,6 +56,8 @@ export default {
 img {
   width: 50%;
   height: 70%;
+  border-radius: 2rem;
+  box-shadow: .2rem .2rem .2rem rgba(0, 0, 0, 0.555);
 }
 .card:hover {
   transform: scale(1.05);
