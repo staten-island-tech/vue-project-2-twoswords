@@ -96,7 +96,7 @@ nav span {
 }
 button {
   margin-top: 1rem;
-  background-color: #E00000;
+  background-color: #e00000;
   border: 0;
   padding: 0.5rem 0.8rem;
   border-radius: 2rem;
@@ -148,7 +148,6 @@ form {
   background-color: #ffffff;
   border: solid rgb(250, 208, 208) 0.2rem;
 }
-
 
 textarea {
   width: 60rem;
