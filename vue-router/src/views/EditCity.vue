@@ -6,28 +6,10 @@
           <h2>Edit City</h2>
           <form @submit.prevent="updateCity">
             <div class="form-group">
-              <input
-                type="text"
-                class="form-control mb-2"
-                placeholder="City"
-                v-model="cityInfo.name"
-              />
+              <input type="text" class="form-control mb-2" placeholder="City" v-model="cityInfo.name"/>
             </div>
             <div class="form-group">
-              <input
-                type="text"
-                class="form-control mb-2"
-                placeholder="County"
-                v-model="cityInfo.county"
-              />
-            </div>
-            <div class="form-group">
-              <input
-                type="text"
-                class="form-control mb-2"
-                placeholder="Country"
-                v-model="cityInfo.country"
-              />
+              <input type="text" class="form-control mb-2" placeholder="Country" v-model="cityInfo.country"/>
             </div>
             <button class="btn btn-primary">Update City</button>
           </form>
@@ -49,7 +31,6 @@ export default {
       docRef: null,
       cityInfo: {
         name: null,
-        county: null,
         country: null,
       },
     };

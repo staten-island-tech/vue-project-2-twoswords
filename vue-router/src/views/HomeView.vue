@@ -3,19 +3,10 @@
     <h2>Cities</h2>
     <div class="container">
       <div class="row">
-  
-          <ul class="list-group">
-            <li
-              v-for="city in cities"
-              :key="city.id"
-            >
-              {{ city.name }}
+        <ul class="list-group">
+          <li v-for="city in cities" :key="city.id"> {{ city.name }}
               <span class="badge badge-primary badge-pill">
-                <router-link
-                  :to="{ path: `/cities/${city.id}` }"
-                  class="btn btn-primary ml-2"
-                  >Edit</router-link
-                >
+                <router-link :to="{ path: `/cities/${city.id}` }" class="btn btn-primary ml-2">Edit</router-link>
                 <Button @click="deleteCity(city.id)"
                   >Delete</Button>
               </span>
