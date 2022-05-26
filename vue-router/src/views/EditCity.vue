@@ -6,20 +6,10 @@
           <h2>Edit City</h2>
           <form @submit.prevent="updateCity">
             <div class="form-group">
-              <input
-                type="text"
-                placeholder="Title"
-                v-model="cityInfo.name"
-              />
+              <input type="text" placeholder="Title" v-model="cityInfo.name"/>
             </div>
-         <div class="form-group">
-              <textarea
-              type="text"
-                class="form-control"
-                id="text"
-                placeholder="Type something here..."
-                v-model="cityInfo.country"
-              ></textarea>
+            <div class="form-group">
+              <textarea type="text" class="form-control" id="text" placeholder="Type something here..." v-model="cityInfo.country"></textarea>
             </div>
             <button>Update City</button>
           </form>
