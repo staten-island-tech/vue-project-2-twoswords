@@ -1,15 +1,24 @@
 <template>
   <div class="home">
-    <h2>Cities</h2>
+
+
+ <h2 class="heading">Book Gallery</h2>
     <div class="container">
-          <Card v-for="city in cities" :key="city.id" :name="city.name" :country="city.country">
+ 
+          <Card v-for="city in cities" :key="city.id" :name="city.name" :image="city.image" :country="city.country">
+          <Modal v-for="city in cities" :key="city.id" :country="city.country"></Modal>
             <span>
+                  <router-link :to="{path: '/cities/${city.id}'}" class="link">Edit</router-link>
               <Button @click="deleteCity(city.id)">Delete</Button>
               <router-link :to="{path: '/cities/${cities.id}'}" class="link">Edit</router-link>
             </span>
           </Card>
 
     </div>
+
+
+
+
   </div>
 </template>
 
@@ -17,12 +26,14 @@
 // @ is an alias to /src
 import citiesColRef from "../firebase/config";
 import { getDocs, doc, deleteDoc } from "firebase/firestore";
+import Modal from '../components/Modal-card.vue';
 import Card from '../components/Card.vue';
 import Button from '../components/Button.vue'
 export default {
   name: 'HomeView',
   components: {
     Card,
+    Modal,
     Button
   },
   data: () => {
@@ -62,5 +73,11 @@ created(){
  display: flex;
  flex-wrap: wrap;
  justify-content: space-evenly;
+},
+.heading{
+display: flex;
+justify-content: center;
 }
+
+
 </style>
