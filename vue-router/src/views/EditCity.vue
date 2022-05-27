@@ -5,23 +5,16 @@
         <div class="col-md-6 offset-md-3">
           <form @submit.prevent="updateCity" class="addform">
             <div class="form-group">
-              <input
-                type="text"
-                placeholder="Title"
-                v-model="cityInfo.name"
-              />
+              <label for="updatetitle">New Title</label>
+              <input id="updatetitle" type="text" placeholder="Title" v-model="cityInfo.name"/>
             </div>
             <div class="form-2group">
-              <input type="text" class="form-control" placeholder="Image Address" v-model="cityInfo.image"/>
+              <label for="updateimg">New Image</label>
+              <input id="updateimg" type="text" class="form-control" placeholder="Image Address" v-model="cityInfo.image"/>
             </div>
-         <div class="form-group">
-              <textarea
-              type="text"
-                class="form-control"
-                id="text"
-                placeholder="Type something here..."
-                v-model="cityInfo.country"
-              ></textarea>
+            <div class="form-group">
+              <label for="text">New Content</label>
+              <textarea type="text" class="form-control" id="text" placeholder="Type something here..." v-model="cityInfo.country"></textarea>
             </div>
             <button class="addbtn">Update City</button>
           </form>

@@ -4,10 +4,10 @@
  <h2>Login</h2>
       
     <label for="email">Email:</label>
-    <input type="email" name="email" v-model="email" required>
+    <input id="email" type="email" name="email" v-model="email" required>
 
-    <label for="email">Password:</label>
-    <input type="password" name="password" v-model="password" required>
+    <label for="password">Password:</label>
+    <input id="password" type="password" name="password" v-model="password" required>
 
     <Button>Login</Button>
     <h3 v-if="error">{{error}}</h3>

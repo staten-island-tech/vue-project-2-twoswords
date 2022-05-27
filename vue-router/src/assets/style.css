@@ -113,16 +113,15 @@ button {
 /* forms */
 label {
   display: block;
-  margin-bottom: 10px;
-  margin-top: 20px;
   font-size: var(--h4);
+  margin-left: 2.8rem;
 }
 input {
   width: 40rem;
   height: 3rem;
   padding: 1.5rem 2rem;
   margin-left: 2.8rem;
-  margin-top: 2rem;
+  margin-bottom: 2rem;
   box-sizing: border-box;
   border: 2px solid #ccc;
   border-radius: 4px;
@@ -154,7 +153,6 @@ textarea {
   width: 60rem;
   height: 50rem;
   padding: 1rem 2rem;
-  margin-top: 2rem;
   margin-left: 2.8rem;
   box-sizing: border-box;
   border: 2px solid #ccc;

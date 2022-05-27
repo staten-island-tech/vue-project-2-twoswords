@@ -4,12 +4,15 @@
       <div class="add-post">
           <form @submit.prevent="createCity" class="addform">
             <div class="form-2group">
-              <input type="text" class="form-control" placeholder="Title" v-model="name"/>
+              <label for="addtitle">Title</label>
+              <input type="text" class="form-control" id="addtitle" placeholder="Think of a good one..." v-model="name"/>
             </div>
              <div class="form-2group">
-              <input type="text" class="form-control" placeholder="Image Address" v-model="image"/>
+              <label for="addimg">Image Address</label>
+              <input type="text" class="form-control" id="addimg" placeholder="Kid friendly pls..." v-model="image"/>
             </div>
             <div class="form-group">
+              <label for="text">Content</label>
               <textarea type="text" class="form-control" id="text" placeholder="Type something here..." v-model="country"></textarea>
             </div>
             <button class="addbtn">Create Post</button>

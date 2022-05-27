@@ -4,11 +4,11 @@
     <div class="center">
       <h2>Signup</h2>
 
-    <label for="email">Email:</label>
-    <input type="email" name="email" v-model="email" required>
+    <label for="semail">Email:</label>
+    <input id="semail" type="email" name="email" v-model="email" required>
 
-    <label for="email">Password:</label>
-    <input type="password" name="password" v-model="password" required>
+    <label for="spassword">Password:</label>
+    <input id="spassword" type="password" name="password" v-model="password" required>
 
     <Button>Signup</Button>
     <h3 v-if="error">{{error}}</h3>
