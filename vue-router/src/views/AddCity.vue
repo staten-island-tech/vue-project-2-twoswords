@@ -9,11 +9,11 @@
             </div>
              <div class="group">
               <label for="addimg">Image Address</label>
-              <input type="text" class="addinput" id="addimg" placeholder="Kid friendly pls..." v-model="image"/>
+              <input type="text" class="addinput" id="addimg" placeholder="Kid friendly pls..." v-model="image" required/>
             </div>
             <div class="group">
               <label for="text">Content (Max Word Length = 1200)</label>
-              <textarea type="text" maxlength="1200" class="addinput" id="text" placeholder="Type something here..." v-model="country"></textarea>
+              <textarea type="text" maxlength="1200" class="addinput" id="text" placeholder="Type something here..." v-model="country" required></textarea>
             </div>
             <button class="addbtn">Create Post</button>
           </form>
