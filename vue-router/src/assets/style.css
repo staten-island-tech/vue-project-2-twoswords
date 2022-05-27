@@ -58,9 +58,12 @@ h3 {
   font-size: var(--h4);
 }
 
-.link {
+.link, .editlink {
   font-size: var(--h4);
   justify-content: center;
+}
+
+.editlink {
   margin-left: 8rem;
 }
 
@@ -205,7 +208,7 @@ textarea {
     background-color: #ff6e4a;
   }
   100% {
-    background-color: ##ff6961;
+    background-color: #ff6961;
   }
 }
 
