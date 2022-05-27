@@ -54,7 +54,7 @@ export default {
     async updateCity() {
       await setDoc(this.docRef, this.cityInfo);
       alert(
-        `The city with ID of ${this.cityId} has been updated successfully!`
+        `The post with ID of ${this.cityId} has been updated successfully!`
       );
       this.$router.push("/");
     },
