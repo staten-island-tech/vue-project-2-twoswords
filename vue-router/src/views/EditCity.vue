@@ -16,7 +16,7 @@
               <label for="text">New Content</label>
               <textarea type="text" class="form-control" id="text" placeholder="Type something here..." v-model="cityInfo.country"></textarea>
             </div>
-            <button class="addbtn">Update City</button>
+            <button class="addbtn">Update post</button>
           </form>
         </div>
       </div>
