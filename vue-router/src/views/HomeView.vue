@@ -1,10 +1,14 @@
 <template>
   <div class="home">
+    <h3 class="warning" v-if="!user">*Certain Features Only Accessible for LoggedIn User*</h3>
     <div class="container">
 
           <Card v-for="city in cities" :key="city.id" :name="city.name" :image="city.image" :country="city.country">
-                  <router-link :to="{path: `/cities/${city.id}`}" class="link">Edit</router-link>
+            <span v-if="user">
+              <router-link :to="{path: `/cities/${city.id}`}" class="editlink">Edit</router-link>
               <Button @click="deleteCity(city.id)">Delete</Button>
+            </span>
+                  
           </Card>   
      
     </div>
@@ -13,6 +17,8 @@
 
 <script>
 // @ is an alias to /src
+import { computed } from "vue";
+import { useStore } from "vuex";
 import citiesColRef from "../firebase/config";
 import { getDocs, doc, deleteDoc } from "firebase/firestore";
 import Card from '../components/Card.vue';
@@ -28,6 +34,13 @@ export default {
    cities: [],
       selectedDoc: null,
     }
+  },
+  setup() {
+    const store = useStore();
+    return {
+      user: computed(() => store.state.user),
+      authIsReady: computed(() => store.state.authIsReady),
+    };
   },
      methods: {
     async fetchCities() {
@@ -65,6 +78,11 @@ created(){
 display: flex;
 align-items: center;
 justify-content: center;
+}
+
+.warning{
+  margin-left: 2rem;
+  margin-top: 2rem;
 }
 
 

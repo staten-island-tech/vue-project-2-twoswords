@@ -13,8 +13,8 @@
               <input id="updateimg" type="text" class="form-control" placeholder="Image Address" v-model="cityInfo.image"/>
             </div>
             <div class="form-group">
-              <label for="text">New Content</label>
-              <textarea type="text" class="form-control" id="text" placeholder="Type something here..." v-model="cityInfo.country"></textarea>
+              <label for="text">New Content (Max Word Length = 1200)</label>
+              <textarea type="text" maxlength="1200" class="form-control" id="text" placeholder="Type something here..." v-model="cityInfo.country"></textarea>
             </div>
             <button class="addbtn">Update Post</button>
           </form>
