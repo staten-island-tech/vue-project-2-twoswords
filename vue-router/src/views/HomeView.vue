@@ -58,7 +58,7 @@ export default {
     async deleteCity(cityId) {
       let cityRef = doc(citiesColRef, cityId);
       await deleteDoc(cityRef);
-      alert("City deleted successully!");
+      alert("Post deleted successully!");
       this.$router.go();
     },
 },
