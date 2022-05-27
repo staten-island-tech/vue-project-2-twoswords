@@ -2,21 +2,21 @@
   <div>
     <div class="container">
       <div class="row">
-        <div class="col-md-6 offset-md-3">
+        <div class="editpost">
           <form @submit.prevent="updateCity" class="addform">
-            <div class="form-group">
+            <div class="group">
               <label for="updatetitle">New Title</label>
               <input id="updatetitle" type="text" placeholder="Title" v-model="cityInfo.name"/>
             </div>
-            <div class="form-2group">
+            <div class="group">
               <label for="updateimg">New Image</label>
-              <input id="updateimg" type="text" class="form-control" placeholder="Image Address" v-model="cityInfo.image"/>
+              <input id="updateimg" type="text" class="control" placeholder="Image Address" v-model="cityInfo.image"/>
             </div>
-            <div class="form-group">
+            <div class="group">
               <label for="text">New Content (Max Word Length = 1200)</label>
-              <textarea type="text" maxlength="1200" class="form-control" id="text" placeholder="Type something here..." v-model="cityInfo.country"></textarea>
+              <textarea type="text" maxlength="1200" class="control" id="text" placeholder="Type something here..." v-model="cityInfo.country"></textarea>
             </div>
-            <button class="addbtn">Update City</button>
+            <button class="addbtn">Update Post</button>
           </form>
         </div>
       </div>

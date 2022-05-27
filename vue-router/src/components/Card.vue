@@ -86,9 +86,8 @@ img {
  animation: BluecolorRotate 6s linear 0s infinite;
 }
 .cardname{
-  margin: 0;
   font-size: 4rem;
-  justify-content: center;
+  text-align: center;
 }
 
 .cardcontent{
