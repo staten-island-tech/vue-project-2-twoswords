@@ -87,6 +87,7 @@ nav span {
   margin: 2rem;
 }
 nav a {
+  color: #000000;
   text-decoration: none;
   font-weight: bold;
   padding: 0.5rem;
