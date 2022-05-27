@@ -7,11 +7,12 @@ body,
   box-sizing: border-box;
 }
 body {
-  background: url("https://images.pexels.com/photos/1323550/pexels-photo-1323550.jpeg?cs=srgb&dl=pexels-simon-berger-1323550.jpg&fm=jpg");
+  background: rgb(232, 246, 255);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  animation: BluecolorRotate 6s linear 0s infinite;
 }
 :root {
   /* Define Colors as colors */
@@ -59,6 +60,8 @@ h3 {
 
 .link {
   font-size: var(--h4);
+  justify-content: center;
+  margin-left: 8rem;
 }
 
 button {
@@ -69,6 +72,8 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: rgb(238, 102, 98);
+  animation: RedcolorRotate 6s linear 0s infinite;
 }
 h1 {
   margin: auto;
@@ -82,7 +87,6 @@ nav span {
   margin: 2rem;
 }
 nav a {
-  color: #444;
   text-decoration: none;
   font-weight: bold;
   padding: 0.5rem;
@@ -173,7 +177,7 @@ textarea {
 }
 
 .logas {
-  color: #444;
+  color: rgb(0, 0, 0);
   text-decoration: none;
   font-weight: bold;
   padding: 3.2rem;
@@ -186,3 +190,41 @@ textarea {
 .cardcontent {
   font-size: 1.5rem;
 }
+
+@keyframes RedcolorRotate {
+  0% {
+    background-color: #ff6961;
+  }
+  25% {
+    background-color: #ff6e4a;
+  }
+  50% {
+    background-color: #ff355e;
+  }
+  75% {
+    background-color: #ff6e4a;
+  }
+  100% {
+    background-color: ##ff6961;
+  }
+}
+
+@keyframes BluecolorRotate {
+  0% {
+    background-color: #e7feff;
+  }
+  25% {
+    background-color: #b9f2ff;
+  }
+  50% {
+    background-color: #89cff0;
+  }
+  75% {
+    background-color: #b9f2ff;
+  }
+  100% {
+    background-color: #e7feff;
+  }
+}
+
+
