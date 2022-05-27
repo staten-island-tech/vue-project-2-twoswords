@@ -11,6 +11,9 @@
                 v-model="cityInfo.name"
               />
             </div>
+            <div class="form-2group">
+              <input type="text" class="form-control" placeholder="Image Address" v-model="cityInfo.image"/>
+            </div>
          <div class="form-group">
               <textarea
               type="text"
@@ -40,7 +43,8 @@ export default {
       docRef: null,
       cityInfo: {
         name: null,
-        county: null,
+        country: null,
+        image: null,
       },
     };
   },
@@ -52,6 +56,7 @@ export default {
       let cityData = city.data();
       this.cityInfo.name = cityData.name;
       this.cityInfo.country = cityData.country;
+      this.cityInfo.image = cityData.image;
     },
     async updateCity() {
       await setDoc(this.docRef, this.cityInfo);
