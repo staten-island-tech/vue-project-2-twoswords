@@ -40,7 +40,7 @@ export default {
     background-color: rgb(227, 243, 255) ;
     margin-top: 5rem;
     width: 100rem;
-    height: 49rem;
+    height: 51rem;
     border: 0.0625rem solid lightgray;
     border-radius: 1rem;
     box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.555);
@@ -77,8 +77,8 @@ img {
  background-color: rgb(252, 228, 228);
 }
 .cardname{
-   margin: 0;
-  font-size: 2rem;
+  margin: 0;
+  font-size: 4rem;
   justify-content: center;
 }
 .back {
