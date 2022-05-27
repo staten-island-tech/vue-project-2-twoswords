@@ -1,19 +1,19 @@
 <template>
   <div>
     <div class="container">
-      <div class="add-post">
+      <div class="addpost">
           <form @submit.prevent="createCity" class="addform">
-            <div class="form-2group">
+            <div class="group">
               <label for="addtitle">Title</label>
-              <input type="text" class="form-control" id="addtitle" placeholder="Think of a good one..." v-model="name"/>
+              <input type="text" class="addinput" id="addtitle" placeholder="Think of a good one..." v-model="name" required/>
             </div>
-             <div class="form-2group">
+             <div class="group">
               <label for="addimg">Image Address</label>
-              <input type="text" class="form-control" id="addimg" placeholder="Kid friendly pls..." v-model="image"/>
+              <input type="text" class="addinput" id="addimg" placeholder="Kid friendly pls..." v-model="image" required/>
             </div>
-            <div class="form-group">
+            <div class="group">
               <label for="text">Content (Max Word Length = 1200)</label>
-              <textarea type="text" maxlength="1200" class="form-control" id="text" placeholder="Type something here..." v-model="country"></textarea>
+              <textarea type="text" maxlength="1200" class="addinput" id="text" placeholder="Type something here..." v-model="country" required></textarea>
             </div>
             <button class="addbtn">Create Post</button>
           </form>
