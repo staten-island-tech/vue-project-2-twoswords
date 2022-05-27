@@ -45,7 +45,7 @@ export default {
     background-color: rgb(238, 102, 98) ;
     margin-top: 5rem;
     width: 60rem;
-    height: 80rem;
+    height: 78rem;
     border: 0.0625rem transparent;
     border-radius: 1rem;
     box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.555);

@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h3 v-if="!user">*Certain Features Only Accessible for LoggedIn User*</h3>
+    <h3 class="warning" v-if="!user">*Certain Features Only Accessible for LoggedIn User*</h3>
     <div class="container">
 
           <Card v-for="city in cities" :key="city.id" :name="city.name" :image="city.image" :country="city.country">
@@ -78,6 +78,11 @@ created(){
 display: flex;
 align-items: center;
 justify-content: center;
+}
+
+.warning{
+  margin-left: 2rem;
+  margin-top: 2rem;
 }
 
 
